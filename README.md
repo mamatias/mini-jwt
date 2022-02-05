@@ -3,11 +3,11 @@
 There are a lot of good implementations of JWT. PyJWT the best
 of all in my opinion, but because I'm using jython 2.7
 I needed something simplier and usefull in that enviroment.
-So I implement this little JWT interpretation.
+So I'm implementing this little JWT interpretation.
 
 ## How to use
 
-```
+```python
 from mini_jwt import mini_encode
 
 payload = {"some":"payload"}
