@@ -1,10 +1,14 @@
-from base64 import encode
-from mini_jwt import mini_encode, mini_decode
+import base64
+from mini_jwt import mini_encode
 import jwt
 
-payload = {"some": "payload"}
+payload = {"some":"payload"}
+key = 'matiastorres'
+
+
 
 print(u"Sección propia")
-print(mini_encode(payload))
+print(mini_encode(payload, key).decode('utf-8'))
 print(u"Sección Librería JWT")
-print(jwt.encode(payload, "secret", algorithm="HS256"))
+print(jwt.encode(payload, key, algorithm="HS256"))
+
