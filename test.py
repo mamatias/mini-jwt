@@ -2,7 +2,7 @@ from mini_jwt import mini_encode
 import jwt
 
 payload = {"some":"payload"}
-key = 'matiastorres'
+key = 'secretkey'
 
 
 
