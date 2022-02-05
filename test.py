@@ -1,4 +1,3 @@
-import base64
 from mini_jwt import mini_encode
 import jwt
 
