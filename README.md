@@ -8,17 +8,18 @@ So I'm implementing this little JWT interpretation.
 ## How to use
 
 ```python
-from mini_jwt import mini_encode
+from mini_jwt import mini_encode, mini_decode
 
 payload = {"some":"payload"}
 key = 'somekey'
 
-# for python 3.X
 my_jwt = mini_encode(payload, key).decode('utf-8')
+
+# for python 3.X
 print(my_jwt)
 
 # for python 2.7
-print my_jwt
+# print my_jwt
 
 
 # testing decode
@@ -26,5 +27,5 @@ print my_jwt
 print(mini_decode(my_jwt, key))
 
 # for python 2.7
-print mini_decode(my_jwt, key)
+# print mini_decode(my_jwt, key)
 ```
