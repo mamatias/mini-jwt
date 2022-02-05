@@ -1,13 +1,15 @@
-from mini_jwt import mini_encode
-import jwt
+from mini_jwt import mini_encode, mini_decode
 
-payload = {"some":"payload"}
-key = 'secretkey'
+payload = {
+    "user":"usuario testt"
+}
+key = 'secretkeyyy'
 
 
 
 print(u"Sección propia")
-print(mini_encode(payload, key).decode('utf-8'))
-print(u"Sección Librería JWT")
-print(jwt.encode(payload, key, algorithm="HS256"))
+my_jwt = mini_encode(payload, key, exp=3).decode('utf-8')
+print(my_jwt)
 
+# testing decode
+print(mini_decode(my_jwt, key))

@@ -14,8 +14,17 @@ payload = {"some":"payload"}
 key = 'somekey'
 
 # for python 3.X
-print(mini_encode(payload, key).decode('utf-8'))
+my_jwt = mini_encode(payload, key).decode('utf-8')
+print(my_jwt)
 
 # for python 2.7
-print mini_encode(payload, key).decode('utf-8')
+print my_jwt
+
+
+# testing decode
+# for python 3.X
+print(mini_decode(my_jwt, key))
+
+# for python 2.7
+print mini_decode(my_jwt, key)
 ```
